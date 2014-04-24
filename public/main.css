@@ -1,0 +1,81 @@
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+}
+
+.neomeme {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+	z-index: 10;
+	color: white;
+}
+
+.neomeme article {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica', sans-serif;
+	z-index: 10;
+	background-color: black;
+	/*border: 1px solid white;*/
+	height: 100%;
+	display: flex;
+	align-items: center;
+	/*justify-content: center;*/
+	overflow: hidden;
+	/*max-width: 400px;*/
+}
+.neomeme article h1 {
+	position: relative;
+	z-index: 10;
+	color: white;
+	opacity: 1;
+	padding: 0;
+	font-size: 4.5em;
+	/*text-shadow: 6px 6px 19px rgba(0, 0, 0, 0.66);*/
+}
+	.neomeme article.word-1 {
+		flex: 1 0 0;
+		justify-content: flex-end;
+	}
+	.neomeme article.word-2 {
+		justify-content: center;
+	}
+	.neomeme article.word-3 {
+		flex: 1 0 0;
+		justify-content: flex-start;
+	}
+.video {
+	position: absolute;
+	/*display: block;*/
+	/*margin: 0 auto;*/
+	/*width: 100%;*/
+	height: 100%;
+	top: 0;
+	/*padding: 0;*/
+	/*left: 0;*/
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	z-index: -10;
+	/*width: 1000px;*/
+}
+
+@media (max-width: 850px) {
+	.neomeme article h1 {
+		font-size: 4em;
+	}
+}
+
+@media (max-width: 640px) {
+	.neomeme article h1 {
+		font-size: 3em;
+	}
+}
