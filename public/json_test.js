@@ -100,14 +100,21 @@ console.log(rand_word_2_image);
 		console.log('rand word type index: ' + rand_word_type);
 	}
 
+	// function to call to check how attributes of the current word
+	function checkCurrentWord() {
+		var current_word        = $('.neomeme');
+		var current_word_length = current_word.children().length;
+		console.log($('.neomeme').children().length);
+	}
+
 
 	// function to call to append specific combination
 	function appendNewRandWordType( RandWordType ) {
 		switch (RandWordType) {
 			case 0:
 				checkCurrentWord();
-				$('.neomeme').append('<article class="word-1"><h1>' + rand_word_1      + '</h1><video autoplay loop muted class="video" id="video-1"><source src="video/TransAd_2.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2"/></video></article>');
-				$('.neomeme').append('<article class="word-3"><h1>' + rand_word_2        + '</h1><video autoplay loop muted class="video" id="video-2"><source src="video/TransAd_2.mp4" type="video/mp4"; codecs="avc1.42E01E, mp4a.40.2"/></video></article>');
+				$('.neomeme').append('<article class="word-1"><h1>' + rand_word_1      + '</h1>');
+				$('.neomeme').append('<article class="word-3"><h1>' + rand_word_2      + '</h1>');
 				load_2_vids();
 				break;
 			case 1:
@@ -178,7 +185,6 @@ console.log(rand_word_2_image);
 		}
 	}
 	
-	createRandWords();
 	createRandWordType();
 
 
